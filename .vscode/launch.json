@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:QRCodeScannerCore}",
+            "name": "Debug QRCodeScannerCore",
+            "program": "${workspaceFolder:QRCodeScannerCore}/.build/debug/QRCodeScannerCore",
+            "preLaunchTask": "swift: Build Debug QRCodeScannerCore"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:QRCodeScannerCore}",
+            "name": "Release QRCodeScannerCore",
+            "program": "${workspaceFolder:QRCodeScannerCore}/.build/release/QRCodeScannerCore",
+            "preLaunchTask": "swift: Build Release QRCodeScannerCore"
+        }
+    ]
+}
