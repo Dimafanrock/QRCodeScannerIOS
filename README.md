@@ -8,6 +8,7 @@ This project is a command-line application built in Swift that allows you to sca
 - **Validates the QR code content** to ensure it is not empty or malformed.
 - **Fetches data** from a remote server using a RESTful API.
 - **Decodes the data** into a structured model for further use (including details like `name`, `description`, `THC`, `CBD`, etc.).
+- **Handles HTTP errors** gracefully by providing detailed error messages for debugging.
 
 The application was developed using a modular architecture, following the principles of MVVM (Model-View-ViewModel) for clean code and testability.
 
@@ -42,6 +43,9 @@ QRCodeScannerCore/
 - **Fetching QR Code Data:**  
   The `QrCodeAPIServiceImpl` class manages network requests to fetch QR code data from the API. It handles the construction of the request URL and setting necessary headers.
 
+- **HTTP Error Handling:**  
+  The application uses the `AppError` class to handle HTTP errors. If an error occurs during the API request, a detailed error message is displayed to help with debugging.
+
 - **ViewModel Logic:**  
   The `QrScannerViewModel` class is used to manage the scanning logic, including validating the QR code and storing the scanned data in the appropriate state. It uses the repository pattern to communicate with the service layer.
 
@@ -70,6 +74,9 @@ QRCodeScannerCore/
     ```bash
     swift run
     ```
+
+4. **Debugging HTTP Errors:**  
+   If you encounter an HTTP error, check the error message displayed in the CLI. The application provides detailed error messages, including the HTTP status code and any additional information from the server response.
 
 ## Tests
 
@@ -101,7 +108,7 @@ swift test
 
 ### Error Handling
 
-- `AppError`: A custom error type used for managing errors throughout the application, including validation and networking errors.
+- `AppError`: A custom error type used for managing errors throughout the application, including validation and networking errors. It provides detailed error messages for debugging.
 
 ## License
 

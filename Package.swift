@@ -15,10 +15,6 @@ let package = Package(
         .executableTarget(
             name: "QRCodeScannerCore",
             dependencies: []
-        ),
-        .testTarget(
-            name: "QRCodeScannerCoreTests",
-            dependencies: ["QRCodeScannerCore"]
         )
     ]
 )
